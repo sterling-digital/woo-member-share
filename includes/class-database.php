@@ -62,6 +62,25 @@ class WMS_Database {
         
         return $wpdb->get_results($sql);
     }
+
+    /**
+     * Get group by ID
+     *
+     * @param int $group_id Group ID
+     * @return object|null Group object or null if not found
+     */
+    public static function get_group_by_id($group_id) {
+        global $wpdb;
+
+        $table_name = $wpdb->prefix . 'share_membership_groups';
+
+        $sql = $wpdb->prepare(
+            "SELECT * FROM $table_name WHERE id = %d",
+            $group_id
+        );
+
+        return $wpdb->get_row($sql);
+    }
     
     /**
      * Create a new group

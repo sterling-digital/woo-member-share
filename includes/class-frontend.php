@@ -200,23 +200,10 @@ class WMS_Frontend {
         $email = sanitize_email($_POST['invite_email']);
         
         // Verify group ownership
-        $group = WMS_Database::get_group_by_customer_variation($user_id, 0);
-        if (!$group || $group->id != $group_id) {
-            // More specific check needed
-            $groups = WMS_Database::get_customer_groups($user_id);
-            $owns_group = false;
-            foreach ($groups as $owned_group) {
-                if ($owned_group->id == $group_id) {
-                    $group = $owned_group;
-                    $owns_group = true;
-                    break;
-                }
-            }
-            
-            if (!$owns_group) {
-                wc_add_notice(__('You do not have permission to manage this group.', WOO_MEMBER_SHARE_TEXT_DOMAIN), 'error');
-                return;
-            }
+        $group = WMS_Database::get_group_by_id($group_id);
+        if (!$group || $group->customer_user_id != $user_id) {
+            wc_add_notice(__('You do not have permission to manage this group.', WOO_MEMBER_SHARE_TEXT_DOMAIN), 'error');
+            return;
         }
         
         // Validate email
@@ -341,16 +328,8 @@ class WMS_Frontend {
         }
         
         // Verify group ownership
-        $groups = WMS_Database::get_customer_groups($user_id);
-        $owns_group = false;
-        foreach ($groups as $group) {
-            if ($group->id == $group_id) {
-                $owns_group = true;
-                break;
-            }
-        }
-        
-        if (!$owns_group) {
+        $group = WMS_Database::get_group_by_id($group_id);
+        if (!$group || $group->customer_user_id != $user_id) {
             wc_add_notice(__('You do not have permission to rename this group.', WOO_MEMBER_SHARE_TEXT_DOMAIN), 'error');
             return;
         }
@@ -374,16 +353,8 @@ class WMS_Frontend {
         $group_id = intval($_POST['group_id']);
         
         // Verify group ownership
-        $groups = WMS_Database::get_customer_groups($user_id);
-        $owns_group = false;
-        foreach ($groups as $group) {
-            if ($group->id == $group_id) {
-                $owns_group = true;
-                break;
-            }
-        }
-        
-        if (!$owns_group) {
+        $group = WMS_Database::get_group_by_id($group_id);
+        if (!$group || $group->customer_user_id != $user_id) {
             wc_add_notice(__('You do not have permission to join this group.', WOO_MEMBER_SHARE_TEXT_DOMAIN), 'error');
             return;
         }
