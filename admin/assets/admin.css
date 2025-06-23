@@ -1,0 +1,119 @@
+/**
+ * Admin styles for Woo Member Share
+ * 
+ * @package WooMemberShare
+ */
+
+/* Product variation settings */
+.woo-member-share-variation-settings {
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+}
+
+.woo-member-share-variation-settings h4 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.woo-member-share-variation-settings .form-field {
+    margin-bottom: 12px;
+}
+
+.woo-member-share-variation-settings label {
+    font-weight: 600;
+    color: #555;
+}
+
+.woo-member-share-variation-settings input[type="number"],
+.woo-member-share-variation-settings select {
+    max-width: 150px;
+}
+
+/* Admin pages */
+.woo-member-share-admin-page {
+    max-width: 1200px;
+}
+
+.woo-member-share-admin-page .form-table th {
+    width: 200px;
+    padding-left: 0;
+}
+
+.woo-member-share-admin-page .description {
+    font-style: italic;
+    color: #666;
+}
+
+/* Groups management table */
+.woo-member-share-groups-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.woo-member-share-groups-table th,
+.woo-member-share-groups-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.woo-member-share-groups-table th {
+    background-color: #f1f1f1;
+    font-weight: 600;
+}
+
+.woo-member-share-groups-table .status-active {
+    color: #46b450;
+    font-weight: 600;
+}
+
+.woo-member-share-groups-table .status-suspended {
+    color: #ffb900;
+    font-weight: 600;
+}
+
+.woo-member-share-groups-table .status-expired {
+    color: #dc3232;
+    font-weight: 600;
+}
+
+.woo-member-share-groups-table .member-count {
+    font-weight: 600;
+}
+
+/* Product data panel */
+#member_share_product_data .options_group {
+    padding: 16px;
+}
+
+#member_share_product_data .form-field {
+    margin-bottom: 16px;
+}
+
+#member_share_product_data .description {
+    color: #666;
+    font-style: italic;
+    margin-top: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .woo-member-share-variation-settings {
+        padding: 10px;
+    }
+    
+    .woo-member-share-groups-table {
+        font-size: 14px;
+    }
+    
+    .woo-member-share-groups-table th,
+    .woo-member-share-groups-table td {
+        padding: 8px;
+    }
+}

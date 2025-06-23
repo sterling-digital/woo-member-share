@@ -1,0 +1,506 @@
+/**
+ * Frontend styles for Woo Member Share
+ * 
+ * @package WooMemberShare
+ */
+
+/* Main Groups Interface */
+.woo-member-share-groups {
+    margin: 20px 0;
+}
+
+.wms-group-container {
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.wms-group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.wms-group-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.wms-member-count {
+    font-size: 14px;
+    color: #6c757d;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+.wms-group-actions .button {
+    background: #007cba;
+    border-color: #007cba;
+    color: white;
+    border-radius: 4px;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.wms-group-actions .button:hover {
+    background: #005a87;
+    border-color: #005a87;
+    transform: translateY(-1px);
+}
+
+.wms-group-details {
+    padding: 25px;
+    background: #ffffff;
+}
+
+.wms-group-details h4,
+.wms-group-details h5 {
+    margin: 25px 0 15px 0;
+    color: #2c3e50;
+    font-weight: 600;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 8px;
+}
+
+.wms-group-details h4:first-child,
+.wms-group-details h5:first-child {
+    margin-top: 0;
+}
+
+/* Group Status */
+.wms-group-status {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid #007cba;
+}
+
+.status-active {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.status-suspended {
+    color: #ffc107;
+    font-weight: 600;
+}
+
+.status-expired {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+/* Customer Controls */
+.wms-customer-controls {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.wms-customer-controls .button {
+    background: #6c757d;
+    border-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.wms-customer-controls .button:hover {
+    background: #545b62;
+    border-color: #545b62;
+    transform: translateY(-1px);
+}
+
+/* Group Settings */
+.wms-group-settings {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.wms-rename-form {
+    margin: 15px 0;
+}
+
+.wms-rename-form p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.wms-rename-form label {
+    font-weight: 600;
+    color: #495057;
+    min-width: 100px;
+}
+
+.wms-rename-form input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.wms-rename-form .button {
+    background: #28a745;
+    border-color: #28a745;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.wms-rename-form .button:hover {
+    background: #218838;
+    border-color: #218838;
+}
+
+/* Members Table */
+.wms-members-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.wms-members-table th,
+.wms-members-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.wms-members-table th {
+    background: linear-gradient(135deg, #495057 0%, #343a40 100%);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.wms-members-table tbody tr:hover {
+    background: #f8f9fa;
+    transition: background-color 0.2s ease;
+}
+
+.wms-members-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Member Type Styling */
+.member-type-customer {
+    background: #007cba;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.member-type-subaccount {
+    background: #6c757d;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Member Status Styling */
+.member-status {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.member-status.status-active {
+    background: #d4edda;
+    color: #155724;
+}
+
+.member-status.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.member-status.status-revoked {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Action Buttons */
+.wms-remove-member-form .button {
+    background: #dc3545;
+    border-color: #dc3545;
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.wms-remove-member-form .button:hover {
+    background: #c82333;
+    border-color: #c82333;
+    transform: translateY(-1px);
+}
+
+/* Invite Member Section */
+.wms-invite-member {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #90caf9;
+}
+
+.wms-invite-member h5 {
+    margin-top: 0;
+    color: #1565c0;
+    border-bottom: 2px solid #1565c0;
+}
+
+.wms-invite-form {
+    margin: 15px 0;
+}
+
+.wms-invite-form p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.wms-invite-form label {
+    font-weight: 600;
+    color: #1565c0;
+    min-width: 120px;
+}
+
+.wms-invite-form input[type="email"] {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px 15px;
+    border: 2px solid #90caf9;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.wms-invite-form input[type="email"]:focus {
+    border-color: #1565c0;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1);
+}
+
+.wms-invite-form .button {
+    background: #1565c0;
+    border-color: #1565c0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.wms-invite-form .button:hover {
+    background: #0d47a1;
+    border-color: #0d47a1;
+    transform: translateY(-1px);
+}
+
+.wms-invite-member .description {
+    color: #1565c0;
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Group Full Message */
+.wms-group-full {
+    background: #fff8e1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #ffcc02;
+    text-align: center;
+}
+
+.wms-group-full .description {
+    color: #e65100;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Form Styling */
+.wms-action-form,
+.wms-rename-form,
+.wms-invite-form {
+    margin: 15px 0;
+}
+
+.wms-remove-member-form {
+    margin: 0;
+    display: inline;
+}
+
+/* Loading States */
+.wms-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.wms-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #007cba;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: wms-spin 1s linear infinite;
+}
+
+@keyframes wms-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wms-group-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .wms-group-details {
+        padding: 15px;
+    }
+    
+    .wms-members-table {
+        font-size: 12px;
+    }
+    
+    .wms-members-table th,
+    .wms-members-table td {
+        padding: 8px 6px;
+    }
+    
+    .wms-rename-form p,
+    .wms-invite-form p {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    
+    .wms-rename-form label,
+    .wms-invite-form label {
+        min-width: auto;
+    }
+    
+    .wms-rename-form input[type="text"],
+    .wms-invite-form input[type="email"] {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .wms-group-container {
+        margin-bottom: 15px;
+    }
+    
+    .wms-group-header {
+        padding: 15px;
+    }
+    
+    .wms-group-title {
+        font-size: 16px;
+    }
+    
+    .wms-member-count {
+        font-size: 12px;
+    }
+    
+    .wms-members-table {
+        font-size: 11px;
+    }
+    
+    .wms-members-table th,
+    .wms-members-table td {
+        padding: 6px 4px;
+    }
+    
+    .member-type-customer,
+    .member-type-subaccount,
+    .member-status {
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+}
+
+/* Accessibility Improvements */
+.wms-group-container:focus-within {
+    box-shadow: 0 0 0 3px rgba(0, 124, 186, 0.2);
+}
+
+.button:focus {
+    outline: 2px solid #007cba;
+    outline-offset: 2px;
+}
+
+input:focus {
+    outline: 2px solid #007cba;
+    outline-offset: 1px;
+}
+
+/* Print Styles */
+@media print {
+    .wms-group-actions,
+    .wms-customer-controls,
+    .wms-invite-member,
+    .wms-remove-member-form {
+        display: none;
+    }
+    
+    .wms-group-container {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+    
+    .wms-group-header {
+        background: #f0f0f0 !important;
+    }
+}
